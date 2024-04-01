@@ -29,7 +29,7 @@ var rules = [
 func _ready():
 	generate_centres()
 	connect_centres()
-	#generate_secondary_roads()
+	generate_secondary_roads()
 	
 
 
@@ -57,7 +57,7 @@ func is_intersecting(a, b, c, d):
 
 
 
-func generate_centres2():
+func generate_centres2_test():
 	var rng = RandomNumberGenerator.new()
 	rng.randomize() # Seadistab RNG algse oleku
 
@@ -114,11 +114,11 @@ func connect_centres():
 					self.add_child(new_road)
 					roads.append(new_road)
 		
-	#modify_roads()
+	#modify_roads_test()
 
 
 
-func modify_roads():
+func modify_roads_test():
 	for road in roads:
 		var line_curve = road.curve
 		var points_list = road.curve.get_baked_points()
